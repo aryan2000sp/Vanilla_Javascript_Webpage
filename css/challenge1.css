@@ -1,0 +1,153 @@
+/*This is the styling for the flex_container class*/
+.flex_container
+{
+	margin: 5px;
+	display: flex;
+	border: 1px solid black;
+	padding: 10px;
+	/*Justify-content is similar to justify in words. 
+	Basically aligns the elements in some directions*/
+	justify-content: space-around;
+	/*
+		Overflow does not allow elements to go out of the 
+		flex_container
+	*/
+	/*overflow: auto;*/
+
+	/*
+		When the screen shrinks the flex-wrap shrinks 
+		the elements inside the flex_container by maintaining
+		the padding
+	*/
+	flex-wrap: wrap;
+
+	/*
+		This attribute decides the way in which elements 
+		are arranged. They could be arranged in row wise,
+		column wise or reversed.
+	*/
+	flex-direction: row;
+
+}
+
+/*This is the styling for the flex_container's div elements class*/
+/*.flex_container div
+{
+	padding: 10px;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+*/
+.container_1
+{
+	/*
+		The 0 is spacing on top and bottom.
+		Whereas the auto is the spacing from 
+		left to right. Auto automatically
+		renders the content by maintaining
+		equal spacing in left and right side
+		(in this case). We also use auto for
+		top and bottom as well. When we change
+		width and height then the inner components
+		are shrinked or expanded keeping the equal
+		distance on both side.
+	*/
+	margin: 10px auto;
+	width: 75%;
+	padding: 10px;
+	border: 3px solid green;
+}
+
+.title
+{
+	text-align: center;
+}
+
+/*
+	Styles the class image div.
+	This css property styles the
+	image that is inside the image div
+*/
+.imageStyling:hover
+{
+	box-shadow: 0px 10px 50px rgba(37, 50, 233, 1);
+}
+
+
+.flex_container_1
+{
+	margin: 5px;
+	display: flex;
+	border: 1px solid black;
+	padding: 10px;
+	/*Justify-content is similar to justify in words. 
+	Basically aligns the elements in some directions*/
+	justify-content: space-around;
+	/*
+		Overflow does not allow elements to go out of the 
+		flex_container
+	*/
+	/*overflow: auto;*/
+
+	/*
+		When the screen shrinks the flex-wrap shrinks 
+		the elements inside the flex_container by maintaining
+		the padding
+	*/
+	flex-wrap: wrap;
+	
+	flex-direction: column;
+}
+
+.flex_container.row1
+{
+	background-image: url('Black_Jack_Table.jpg');
+	width: auto;
+	height: auto;
+	background-position: center;
+	justify-content: center;
+}
+
+.flex_container_1.box
+{
+	min-width: 500px;
+	min-height: 400px;
+	justify-content: space-between;
+
+}
+
+.flex_card_container .button_styling
+{
+	margin: 5px;
+	display: flex;
+	padding: 10px;
+	/*Justify-content is similar to justify in words. 
+	Basically aligns the elements in some directions*/
+	justify-content: center;
+	/*
+		Overflow does not allow elements to go out of the 
+		flex_container
+	*/
+	/*overflow: auto;*/
+
+	/*
+		When the screen shrinks the flex-wrap shrinks 
+		the elements inside the flex_container by maintaining
+		the padding
+	*/
+	flex-wrap: wrap;
+
+	/*
+		This attribute decides the way in which elements 
+		are arranged. They could be arranged in row wise,
+		column wise or reversed.
+	*/
+	flex-direction: row;
+}
+
+/*For alignment of text in center for fields in table*/
+th, td
+{
+	text-align: center;
+}

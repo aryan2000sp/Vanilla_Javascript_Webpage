@@ -1,0 +1,195 @@
+<!--
+	The main difference between id and class is that
+	class can be used multiple times whereas ids can be
+	be used only once. Ids are unique whereas class are
+	not. Ids have more preference over the classes.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css">
+	<link rel="stylesheet" href="css/challenge1.css">
+</head>
+<body>
+	<!----------------------------------------------------------------------------------->
+	<!--
+		This was challenge 1
+	-->
+	<div class="container_1">
+		<div class="title">
+			<h2>Challenge 1: Your Age in Days</h2>
+		</div>
+		<div class="flex_container">
+			<div>
+				<button type="button" class="btn btn-primary" onclick="daysInYears()">Click Me</button>
+			</div>
+			<div>
+				<button type="button" class="btn btn-danger" onclick="reset()">Reset</button>	
+			</div>
+
+		</div>
+		<div class="flex_container">
+			<div id="result">
+				<!-- To be coded in js -->
+			</div>
+		</div>
+	</div>
+
+	<!----------------------------------------------------------------------------------->
+
+	<!--
+		This is challenge 2
+	-->
+	<div class="container_1">
+		<div class="title">
+			<h2>Challenge 2: Cat Generator</h2>
+		</div>
+
+		<div class="flex_container">
+			<button type="button" class="btn btn-success" id='actionButton' onclick="addingImage()">Click me</button>
+		</div>
+
+		<div id='images' class="flex_container">
+			<!-- 
+				Inside this div we will create
+				multiple divs which will hold 
+				a image in them. 
+			-->
+		</div>
+	</div>
+
+	<!----------------------------------------------------------------------------------->
+
+	<!--
+		This is challenge 3
+	-->
+	<div class='container_1'>
+		<div class="title">
+			<h2>Challenge 3: ROCK PAPER SCISSORS</h2>
+		</div>
+		<div id='flex_conatainer' class='flex_container'>
+			<img class='imageStyling' id='rock' src="Images/rock.jpg" height=150 width=150 onclick="playGame(this)">
+
+			<img class='imageStyling' id='paper' src="Images/paper.jpg" height=150 width=150 onclick="playGame(this)">
+
+			<img class='imageStyling' id='scissors' src="Images/scissors.jpg" height=150 width=150 onclick="playGame(this)">
+		</div>
+	</div>
+
+	<!----------------------------------------------------------------------------------->
+
+	<!--
+		This is challenge 4
+	-->
+	<div class='container_1'>
+		<div class="title">
+			<h2>Challenge 4: Changing the color of Buttons</h2>
+		</div>
+		<div class='flex_container'>
+			<!--
+				This will have a tag form which will
+				hold the buttons and the option selector
+			-->
+			<form>
+				<!--
+					When a value is changed then 
+					changeColorButton(this) function
+					is triggered. Here we pass in the
+					select tag itself as the parameter
+					hence we use this.
+				-->
+				<select id='selectChange' onchange="changeColorButton(this)">
+					<option value="red">Red</option>
+					<option value="green">Green</option>
+					<option value="blue">Blue</option>
+					<option value="reset">Reset</option>
+					<option value="random">Random</option>
+				</select>
+			</form>
+			<button class='btn btn-danger'>Amazon</button>
+			<button class='btn btn-success'>Google</button>
+			<button class='btn btn-primary'>Yahoo</button>
+			<button class='btn btn-warning'>Facebook</button>
+		</div>
+	</div>
+	<!----------------------------------------------------------------------------------->
+
+	<!--
+		This is challenge 4: BlackJack
+	-->
+
+	<div class="container_1">
+		<audio id='cardSound' src="sound/card_sound.mp3"></audio>
+		<audio id='winSound' src="sound/win.mp3"></audio>
+		<audio id='lostSound' src="sound/lost.wav"></audio>
+		<div class="title">
+			<h2>Challenge 5: Black Jack</h2>
+			<span><h3 id='gameStatus' style="color: blue">Lets Play</h3></span>
+		</div>
+
+		<div class="flex_container_1">
+
+			<!--Row 1-->
+			<div class="flex_container row1" id="row1">
+
+				<!-- Player Div-->
+				<div class="flex_container_1 box" id="playerDiv">
+					<div class="title"><span><h3 style="color: white"><strong><b>Player:</b></strong></h3>
+					<h4 id='playerScore' style="color: white">0</h4></span></div>
+					<!--Div for displaying the cards-->
+					<div class="flex_card_container" id ="playerCardDisplay">
+						<!--<img src="Images/cards_png_zip/PNG/2C.png" width="100px" height="150px">
+						<img src="Images/cards_png_zip/PNG/3D.png" width="100px" height="150px">-->
+						<!--Add Card Image Using js-->
+						
+					</div>
+				</div>
+
+				<!-- Dealer Div-->
+				<div class="flex_container_1 box" id="dealerDiv">
+					<div class="title"><span><h3 style="color: white"><b><strong>Dealer:</strong></b></h3>
+					<h4 id='dealerScore' style="color: white">0</h4></span></div>
+					<!--Div for displaying the cards-->
+					<div class="flex_card_container" id="dealerCardDisplay">
+
+						<!--Add Card Image Using js-->
+
+					</div>
+				</div>
+			</div>
+
+			<!--Row 2-->
+			<div class="flex_container" id="row2">
+				<div class="button_styling">
+					<button type="button" class="btn btn-success btn-lg" onclick="gameLogic(this)" id="hit">Hit</button>
+					<button type="button" class="btn btn-warning btn-lg" onclick="gameLogic(this)" id="stand">Stand</button>
+					<button type="button" class="btn btn-danger btn-lg" onclick="gameLogic(this)" id="deal">Deal</button>
+				</div>
+			</div>
+
+			<!--Row 3-->
+			<div class="flex_container" id="row3">
+
+				<table class='table table-hover'>
+					<!--The first row is table header-->
+					<tr>
+						<th><h3><b>Player</b></h3></th>
+						<th><h3><b>Dealer</b></h3></th>
+					</tr>
+					<tr>
+						<td><h4 id="playerPoints">0</h4></td>
+						<td><h4 id="dealerPoints">0</h4></td>
+					</tr>
+				</table>
+
+			</div>
+		</div>
+	</div>
+	<script src="js/challenge1.js"></script>
+
+</body>
+</html>
+
+
